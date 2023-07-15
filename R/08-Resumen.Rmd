@@ -1,0 +1,67 @@
+# Resumen  {.unlisted .unnumbered}
+
+```{r, echo = FALSE}
+for(i in tablas){
+load(file = paste0(here::here(), "/Output/IMU_", i, ".RData"))
+}
+
+p <- NULL
+for(i in 1:2){
+nombres <- names(get(paste0("DP2_",tablas[i])))
+p[[paste(tablas[i])]] <- get(paste0("DP2_",tablas[i])) %>%
+                           group_by(get(nombres[23])) %>%
+                             summarise(POB_TOT = sum(get(nombres[9])),
+                                       GM = n())
+}
+p <- do.call(cbind.data.frame, p)
+
+tabla <- p %>%
+          select(-c("2020.get(nombres[23])")) %>%
+           janitor::adorn_totals(fill = "-", where= "row")
+
+tabla %>% 
+ gt() %>%
+  tab_header(title = "Nacional: Población y unidades geograficas según el índice de marginación, 2010-2020") %>%
+   tab_options(heading.title.font.size = 12, 
+               heading.subtitle.font.size = 10,
+               table.font.names = 'montserrat',
+               table.align = "center",
+               table.font.size = 8,
+               data_row.padding = px(1)) %>%
+     tab_style(style = list(cell_text(align = "left",
+                                      weight = 'bold')),
+               locations = list(cells_title(groups = c("title")))) %>%
+     tab_style(style = list(cell_text(align = "left")),
+               locations = list(cells_title(groups = c("subtitle")))) %>%
+     tab_style(style = list(cell_text(weight = 'bold')),
+               locations = cells_body(columns = everything(), rows = tidyselect::last_col())) %>%
+      cols_label(`2010.POB_TOT` = md("**Población 2010**"),
+                 `2020.POB_TOT` = md("**Población 2020**"),
+                 `2010.GM` = md("**AGEB**"),
+                 `2020.GM` = md("**AGEB**"),
+                 "2010.get(nombres[23])" = md("**Grados**")) %>%
+       fmt_integer(columns = c(2:5), sep_mark = " ") %>%
+        tab_spanner(label = "2010",
+                    columns = c(2:3)) %>%
+        tab_spanner(label = "2020",
+                    columns = c(4:5)) %>%
+         as_raw_html() 
+```
+
+
+
+## Mapa a nivel AGEB {-}
+
+
+```{r, echo=FALSE, out.width='100%', warning=FALSE, message=FALSE}
+readRDS(file = paste0(here::here(), "/Output/Mapa.rds"))
+```
+
+
+## Comparación en el tiempo {-}
+
+<div style="height:500px;">
+```{r, echo=FALSE, out.width='100%'}
+readRDS(paste0(here::here(), "/Output/Mapas_2010-2020.rds"))
+```
+</div> 
