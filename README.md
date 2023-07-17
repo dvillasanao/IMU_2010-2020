@@ -1,5 +1,5 @@
 # IMU_2010-2020
-Índice de margianción a nivel  AGEB 2010 - 2020 (Bookdown)   
+Índice de marginación a nivel  AGEB 2010 - 2020 (Bookdown)   
 
 Bookdown:: https://dvillasanao.github.io/IMU_2010-2020
 
