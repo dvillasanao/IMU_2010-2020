@@ -1,0 +1,82 @@
+# Resumen  {.unlisted .unnumbered}
+
+```{r, echo = FALSE}
+for(i in tablas){
+load(file = paste0(here::here(), "/Output/IMU_", i, ".RData"))
+}
+
+p <- NULL
+for(i in 1:2){
+nombres <- names(get(paste0("DP2_",tablas[i])))
+p[[paste(tablas[i])]] <- get(paste0("DP2_",tablas[i])) %>%
+                           group_by(get(nombres[23])) %>%
+                             summarise(POB_TOT = sum(get(nombres[9])),
+                                       GM = n())
+}
+p <- do.call(cbind.data.frame, p)
+
+tabla <- p %>%
+          select(-c("2020.get(nombres[23])")) %>%
+           janitor::adorn_totals(fill = "-", where= "row")
+
+tabla %>% 
+ gt() %>%
+  tab_header(title = "Nacional: Población y unidades geograficas según el índice de marginación, 2010-2020") %>%
+   tab_options(heading.title.font.size = 14, 
+               heading.subtitle.font.size = 12,
+               table.font.names = 'Century Gothic',
+               table.align = "center",
+               table.font.size = 10,
+               data_row.padding = px(1)) %>%
+     tab_style(style = list(cell_text(align = "left",
+                                      weight = 'bold')),
+               locations = list(cells_title(groups = c("title")))) %>%
+     tab_style(style = list(cell_text(align = "left")),
+               locations = list(cells_title(groups = c("subtitle")))) %>%
+     tab_style(style = list(cell_text(weight = 'bold')),
+               locations = cells_body(columns = everything(), rows = tidyselect::last_col())) %>%
+      cols_label(`2010.POB_TOT` = md("**Población 2010**"),
+                 `2020.POB_TOT` = md("**Población 2020**"),
+                 `2010.GM` = md("**AGEB**"),
+                 `2020.GM` = md("**AGEB**"),
+                 "2010.get(nombres[23])" = md("**Grados**")) %>%
+       fmt_integer(columns = c(2:5), sep_mark = " ") %>%
+        tab_spanner(label = "2010",
+                    columns = c(2:3)) %>%
+        tab_spanner(label = "2020",
+                    columns = c(4:5)) %>%
+         as_raw_html() 
+```
+
+La tabla indica que entre 2010 y 2020, hubo cambios notables en la distribución de la población por grado de marginación en México a nivel AGEB. En 2010, la mayor parte de la población estaba bajo un esquema de grado de marginación 'Bajo' (29,563,917 personas) y 'Medio' (23,187,056 personas), siendo el 60.9%. Para el 2020, el 61.1% la población sigue bajo el esquema de marginación 'Medio' (28,513,845 personas) y 'Bajo' (31,958,487 personas). Durante este período, la población con marginación 'Muy alta' aumentó de 5,096,535 (5.9%) a 6,245,322 (6.3%), mientras que la población con grado de  marginación 'Muy baja' disminuyó de 18,710,501 a 18,392,469, pasando del 21.6% al 18.6% de la poclación. En general, esto sugiere un incremento en la marginación 'Alta' y 'Medio', y una reducción en la marginación 'Muy bajo' desde 2010 hasta 2020.     
+
+La tabla presenta una comparación temporal del grado de marginación a nivel de AGEB en México, desagregada por el grado de marginación para los años `2010` y `2020`.     
+
+**Observaciones Clave**    
+
+**1.- Incremento en la Población de Grado Muy Alto y Alto:** Hay un aumento en la población en grados de marginación Muy Alto y Alto de 2010 a 2020. En 2010, el 5.9% de la población residía en AGEB's con un grado de marginación Muy Alto, mientras que en 2020 esta proporción aumentó al 6.3%. Para el grado Alto, la población pasó del 11.7% en 2010 al 14.0% en 2020.    
+
+**2.- Disminución en Grados Bajo y Muy Bajo:** La población en grados de marginación Bajo y Muy Bajo muestra una tendencia a la baja. En 2010, el 34.1% de la población residía en AGEB's con grado de marginación Bajo, disminuyendo al 32.3% en 2020. Para el grado Muy Bajo, la población disminuyó del 21.6% en 2010 al 18.6% en 2020.  
+
+**3.- Incremento en Grado Medio:** La población en el grado de marginación Medio ha aumentado significativamente. En 2010, el 26.8% de la población residía en AGEB's con este grado de marginación, aumentando al 28.8% en 2020.     
+
+**Comparación entre Grados Muy Alto y Alto vs. Muy Bajo y Bajo:** En términos generales, la mayoría de la población reside en AGEBs con grados de marginación Bajo y Muy Bajo. En 2010, el 55.7% de la población se encontraba en estos grados, disminuyendo al 50.9% en 2020. Por otro lado, la población en grados de marginación Muy Alto y Alto representa una proporción mayor, con el 17.6% en 2010 y aumentando al 20.3% en 2020.    
+
+**Escenario General:** En el escenario general, entre 2010 y 2020, se observa que una gran parte de la población en México vive en AGEB's con grados de marginación Medio, abarcando casi el 29% de la población en 2020. Esto indica una concentración significativa de la población en áreas con niveles medios de marginación. Sin embargo, hay un aumento notable en la población que reside en AGEB's con un grado de marginación Muy Alto y Alto, lo cual podría ser motivo de advertencia. En contraste, las AGEB's con grados de marginación Bajo y Muy Bajo han visto una disminución en su proporción de la población total, lo que sugiere una leve degradación en esos niveles. En general, la tendencia muestra una estabilidad en los grados de marginación Medio y una reducción en los grados Bajo y Muy Bajo, mientras que los grados Muy Alto y Alto han visto incrementos en sus proporciones de población.    
+
+
+## Mapa a nivel AGEB {-}
+
+
+```{r, echo=FALSE, out.width='100%', warning=FALSE, message=FALSE}
+readRDS(file = paste0(here::here(), "/Output/Mapa.rds"))
+```
+
+
+## Comparación en el tiempo {-}
+
+<div style="height:500px;">
+```{r, echo=FALSE, out.width='100%'}
+readRDS(paste0(here::here(), "/Output/Mapas_2010-2020.rds"))
+```
+</div> 
