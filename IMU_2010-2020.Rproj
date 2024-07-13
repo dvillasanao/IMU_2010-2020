@@ -11,5 +11,8 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
+<<<<<<< HEAD
 
 BuildType: Website
+=======
+>>>>>>> origin/main
