@@ -34,7 +34,7 @@ El índice de marginación a nivel de AGEB ha sido utilizado ampliamente en Méx
 
 La importancia del índice de marginación en las políticas públicas radica en su capacidad para proporcionar una visión integral de las condiciones socioeconómicas y de desigualdad en el país. Permite una toma de decisiones más informada y basada en evidencia, garantizando que los recursos y programas se dirijan a las áreas más necesitadas. Además, al monitorear los cambios en el índice a lo largo del tiempo, se puede evaluar el impacto de las políticas implementadas y realizar ajustes necesarios para lograr una mayor inclusión y desarrollo equitativo en México.    
 
-<a href="https://raw.githubusercontent.com/dvillasanao/IMU_2010_2020/main/img/Mapas_2010_2020.png" data-lightbox="image-1" data-title="Mapas">
+<a href="https://raw.githubusercontent.com/dvillasanao/IMU_2010-2020/main/img/Mapas_2010_2020.png" data-lightbox="image-1" data-title="Mapas">
 ```{r, echo=FALSE, out.width='100%'}
 knitr::include_graphics(paste0(here::here(), "/img/Mapas_2010_2020.png"))
 ```

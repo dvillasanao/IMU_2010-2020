@@ -28,7 +28,7 @@ p <- lapply(1:2, function(i){
 )
 ```
 
-<a href="https://raw.githubusercontent.com/dvillasanao/IMU_2010_2020/main/img/correlaciones_2010_2020.png" data-lightbox="image-1" data-title="correlaciones">
+<a href="https://raw.githubusercontent.com/dvillasanao/IMU_2010-2020/main/img/correlaciones_2010_2020.png" data-lightbox="image-1" data-title="correlaciones">
 ```{r, echo = FALSE, fig.width=12, fig.height=12, out.width='100%'}
 require(knitr)
 knitr::include_graphics(paste0(here::here(), "/img/correlaciones_2010_2020.png"))
