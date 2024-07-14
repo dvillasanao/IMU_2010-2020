@@ -47,15 +47,12 @@ for(i in tablas){
 }
 ```
 
-
-## Base de referencia  {-}     
-
 Para asegurar las propiedades del indicador sintético, un aumento en los indicadores simples implica un aumento en la carencia de los servicios, lo que implicaría una disminución de la calidad de vida, por lo que se multiplica cada indicador por **-1**, de esta forma, un aumento en la variable supone una mejora en la calidad de vida.    
 
 
 ## Base de referencia  {-}
 
-Se define al valor de referencia para cada uno de los indicadores parciales, con la finalidad de hacer comparaciones entre las diferentes unidades espaciales (Localidades). Siendo este el valor mínimo de cada indicador simple como referencia, representado como la “situación no deseada”. Como resultado, un valor alto implicaría una distancia alejada con respecto a una situación teórica “situación no deseada”. Por lo tanto $d_{ij}$ mide la distancia entre el indicador parcial $j$ en la entidad $i$ y su valor de referencia.    
+Se define al valor de referencia para cada uno de los indicadores parciales, con la finalidad de hacer comparaciones entre las diferentes unidades espaciales (AGBE's). Siendo este el valor mínimo de cada indicador simple como referencia, representado como la “situación no deseada”. Como resultado, un valor alto implicaría una distancia alejada con respecto a una situación teórica “situación no deseada”. Por lo tanto $d_{ij}$ mide la distancia entre el indicador parcial $j$ en la entidad $i$ y su valor de referencia.    
 
 Se toma como base de referencia el valor del mínimo del `2010 - 2020`, ya que este tipo de cambio permite la comparabilidad en el tiempo.    
 
