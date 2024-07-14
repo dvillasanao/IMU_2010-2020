@@ -77,7 +77,7 @@ cor.coeff %>%
        cols_label(`Ind_2010` = md("**Ind**"), 
                   `2010` = md("**2010**"),
                   `Ind_2020` = md("**Ind**"),
-                  `2020` = md("**2020**"))%>%
+                  `2020` = md("**2020**")) %>%
         fmt_number(columns = c(2, 4), decimals = 3) %>%
          cols_width(everything() ~ px(80)) %>%
           as_raw_html()           

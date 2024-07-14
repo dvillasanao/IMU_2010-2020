@@ -40,11 +40,11 @@ knitr::include_graphics(paste0(here::here(), "/img/Mapas_2010_2020.png"))
 ```
 
 
-**Base de datos** de los tres años se encuentran disponibles en la página oficial de [CONAPO](https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372)   
+**Base de datos** de los dos años se encuentran disponibles en la página oficial de [CONAPO](https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372)   
 
 **Datos abiertos de México** [datos.gob.mx](https://datos.gob.mx/busca/dataset/indice-de-marginacion-carencias-poblacionales-por-localidad-municipio-y-entidad)   
 
-**Publicación** [Índice De Marginación Por Entidad Federativa Y Municipio 2020](https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372).    
+**Publicación** [Índice De Marginación Urbana 2020](https://www.gob.mx/cms/uploads/attachment/file/828844/urbana.pdf).    
 
 **Índice de marginación a nivel estatal** [Bookdown](https://dvillasanao.github.io/IME_2010_2020/)   
 **Índice de marginación a nivel municipal** [Bookdown](https://dvillasanao.github.io/IMM_2010-2020/)   
