@@ -24,21 +24,33 @@ En términos generales, se ha observado una disminución gradual del índice de 
 
 El índice de marginación a nivel de AGEB ha sido utilizado ampliamente en México para informar y respaldar la formulación de políticas públicas. Algunos de los usos más destacados son los siguientes:   
 
-- Identificación de zonas prioritarias: El índice de marginación permite identificar las áreas con mayores niveles de pobreza y desigualdad, lo que ayuda a focalizar los recursos y programas de desarrollo en las regiones más necesitadas.   
+- **Identificación de zonas prioritarias**: El índice de marginación permite identificar las áreas con mayores niveles de pobreza y desigualdad, lo que ayuda a focalizar los recursos y programas de desarrollo en las regiones más necesitadas.   
 
-- Asignación de recursos: El índice proporciona una base objetiva para la asignación de recursos públicos, tanto a nivel federal como estatal y municipal. Permite la distribución equitativa de fondos para infraestructura, educación, salud y otros servicios en función de las necesidades de cada área.   
+- **Asignación de recursos**: El índice proporciona una base objetiva para la asignación de recursos públicos, tanto a nivel federal como estatal y municipal. Permite la distribución equitativa de fondos para infraestructura, educación, salud y otros servicios en función de las necesidades de cada área.   
 
-- Monitoreo de políticas públicas: Permite evaluar el impacto de las políticas públicas implementadas para reducir la pobreza y la desigualdad. Ayuda a medir el progreso en el tiempo y realizar ajustes necesarios en las estrategias y programas en curso.   
+- **Monitoreo de políticas públicas**: Permite evaluar el impacto de las políticas públicas implementadas para reducir la pobreza y la desigualdad. Ayuda a medir el progreso en el tiempo y realizar ajustes necesarios en las estrategias y programas en curso.   
 
-- Planificación urbana y regional: Es utilizado en la planificación del desarrollo urbano y regional. Ayuda a identificar las áreas que requieren mayor inversión en infraestructura y servicios básicos, así como a prevenir y mitigar la segregación socioespacial.   
+- **Planificación urbana y regional**: Es utilizado en la planificación del desarrollo urbano y regional. Ayuda a identificar las áreas que requieren mayor inversión en infraestructura y servicios básicos, así como a prevenir y mitigar la segregación socioespacial.   
 
-La importancia del índice de marginación en las políticas públicas radica en su capacidad para proporcionar una visión integral de las condiciones socioeconómicas y de desigualdad en el país. Permite una toma de decisiones más informada y basada en evidencia, garantizando que los recursos y programas se dirijan a las áreas más necesitadas. Además, al monitorear los cambios en el índice a lo largo del tiempo, se puede evaluar el impacto de las políticas implementadas y realizar ajustes necesarios para lograr una mayor inclusión y desarrollo equitativo en México.     
+La importancia del índice de marginación en las políticas públicas radica en su capacidad para proporcionar una visión integral de las condiciones socioeconómicas y de desigualdad en el país. Permite una toma de decisiones más informada y basada en evidencia, garantizando que los recursos y programas se dirijan a las áreas más necesitadas. Además, al monitorear los cambios en el índice a lo largo del tiempo, se puede evaluar el impacto de las políticas implementadas y realizar ajustes necesarios para lograr una mayor inclusión y desarrollo equitativo en México.    
+
+<a href="https://raw.githubusercontent.com/dvillasanao/IMU_2010_2020/main/img/Mapas_2010_2020.png" data-lightbox="image-1" data-title="Mapas">
+```{r, echo=FALSE, out.width='100%'}
+knitr::include_graphics(paste0(here::here(), "/img/Mapas_2010_2020.png"))
+```
+
 
 **Base de datos** de los tres años se encuentran disponibles en la página oficial de [CONAPO](https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372)   
 
 **Datos abiertos de México** [datos.gob.mx](https://datos.gob.mx/busca/dataset/indice-de-marginacion-carencias-poblacionales-por-localidad-municipio-y-entidad)   
 
-**Publicación** [Índice De Marginación Por Entidad Federativa Y Municipio 2020](https://www.gob.mx/cms/uploads/attachment/file/835461/Indices_Coleccion_280623_localidad.pdf).     
+**Publicación** [Índice De Marginación Por Entidad Federativa Y Municipio 2020](https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372).    
+
+**Índice de marginación a nivel estatal** [Bookdown](https://dvillasanao.github.io/IME_2010_2020/)   
+**Índice de marginación a nivel municipal** [Bookdown](https://dvillasanao.github.io/IMM_2010-2020/)   
+**Índice de marginación a nivel localidad** [Bookdown](https://dvillasanao.github.io/IML_2010_2020/)   
+**Índice de marginación a nivel AGEB** [Bookdown](https://dvillasanao.github.io/IML_2010-2020/)   
+**Índice de marginación a nivel Colonia** [Bookdown](https://dvillasanao.github.io/IMC_2020/)       
 
 ```{r, include=FALSE}
 # automatically create a bib database for R packages

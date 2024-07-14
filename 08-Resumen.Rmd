@@ -67,6 +67,8 @@ La tabla presenta una comparación temporal del grado de marginación a nivel de
 
 ## Mapa a nivel AGEB {-}
 
+### Zona Metropolitana del Valle de México {-}
+
 
 ```{r, echo=FALSE, out.width='100%', warning=FALSE, message=FALSE}
 readRDS(file = paste0(here::here(), "/Output/Mapa.rds"))
@@ -75,8 +77,3 @@ readRDS(file = paste0(here::here(), "/Output/Mapa.rds"))
 
 ## Comparación en el tiempo {-}
 
-<div style="height:500px;">
-```{r, echo=FALSE, out.width='100%'}
-readRDS(paste0(here::here(), "/Output/Mapas_2010-2020.rds"))
-```
-</div> 
