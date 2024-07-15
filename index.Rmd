@@ -38,7 +38,7 @@ La importancia del índice de marginación en las políticas públicas radica en
 ```{r, echo=FALSE, out.width='100%'}
 knitr::include_graphics(paste0(here::here(), "/img/Mapas_2010_2020.png"))
 ```
-
+</a>
 
 **Base de datos** de los dos años se encuentran disponibles en la página oficial de [CONAPO](https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372)   
 
