@@ -40,7 +40,11 @@ Para compilar este libro necesitas tener instalados los siguientes programas y p
 
 ### Bookdown  
 
-**Enlace**: <https://dvillasanao.github.io/IMU_2010-2020/>   
+**Enlace**: <https://dvillasanao.github.io/IMU_2010-2020/>    
+
+## 🌐 Publicación
+
+El bookdown está disponible en [Netlify](https://imu-2010-2020-bookdown.netlify.app/) para consulta en línea.
 
 ### Documentos Bookdown  
 
@@ -50,6 +54,13 @@ Para compilar este libro necesitas tener instalados los siguientes programas y p
 **Índice de marginación a nivel AGEB** [Bookdown](https://dvillasanao.github.io/IMU_2010-2020/)   
 **Índice de marginación a nivel colonia** [Bookdown](https://dvillasanao.github.io/IMC_2020/)   
 
+## Código de Conducta
+
+Por favor, revisa el [Código de Conducta](CODE_OF_CONDUCT.md) antes de contribuir.
+
+## Licencia
+
+Este trabajo de Diana Villasana Ocampo está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"> Licencia Creative Commons Atribución 4.0 Internacional.</a>.
 
 
 
